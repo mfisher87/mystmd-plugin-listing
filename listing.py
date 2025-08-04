@@ -93,7 +93,7 @@ def cards_from_posts(posts, /) -> list[dict]:
         cards.append(
             {
                 "type": "card",
-                "url": f"/{irow['path'].with_suffix('')}",
+                "url": f"{irow['path'].with_suffix('')}",
                 "children": [
                     {"type": "cardTitle", "children": [ast_text(irow["title"])]},
                     {"type": "paragraph", "children": [ast_text(irow["content"])]},
